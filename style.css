@@ -190,7 +190,6 @@ body {
 .competences .card .face.face2 .content a {
   margin: 15px 0 0;
   display: inline-block;
-
   text-decoration: none;
   font-weight: 900;
   color: #333;
@@ -230,7 +229,7 @@ body {
   margin: 15px;
   box-sizing: border-box;
   overflow: hidden;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
 }
 
 .container .box:before {
@@ -246,6 +245,7 @@ body {
   transition: 0.5s;
   transform: scaleY(0);
   opacity: 0;
+  z-index: 1;
 }
 
 .container .box:hover:before {
@@ -266,6 +266,7 @@ body {
   transition: 0.5s;
   transform: scaleX(0);
   opacity: 0;
+  z-index: 1;
 }
 
 .container .box:hover:after {
@@ -273,13 +274,58 @@ body {
   opacity: 1;
 }
 
-/*.container .box .imgBox {
+.container .box .imgBox {
   position: relative;
 }
 
-.container .box .imgBox {
+.container .box .imgBox img {
   width: 100%;
-}*/
+  transition: 0.5s;
+}
+
+.container .box:hover .imgBox img {
+  opacity: 0.2;
+  transform: scale(1.2);
+}
+
+.container .box .projectContent {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container .box .projectContent h2 {
+  margin: 0 0 10px;
+  padding: 0;
+  color: #fff;
+  transition: 0.5s;
+  transform: translateY(-50px);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.container .box .projectContent p {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  transition: 0.5s;
+  transform: translateY(50px);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.container .box:hover .projectContent h2,
+.container .box:hover .projectContent p {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+  transition-delay: 0.2s;
+}
 
 .social-media {
   margin: 0;
