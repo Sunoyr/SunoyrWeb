@@ -105,6 +105,7 @@ body {
 .first-content {
   height: 100vh;
   width: 55vw;
+  display: flex;
   background-color: rgb(30, 33, 51, 0.9);
 }
 
@@ -206,9 +207,15 @@ body {
   padding: 0;
   margin: 0;
   height: 100vh;
+  min-height: 1000px;
   color: #fff;
   font-family: consolas;
   background: rgb(131, 29, 29);
+}
+.projets h2 {
+  text-align: center;
+  font-size: 3em;
+  padding: 10px 0 0 0;
 }
 
 .container {
@@ -416,7 +423,7 @@ body {
   background: #55135e;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1200px) {
   * {
     padding: 0;
     margin: 0;
@@ -443,5 +450,21 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .competences {
+    min-height: 100vh;
+    position: relative;
+    font-family: consolas, sans-serif;
+    background: #333;
+  }
+
+  .competences .card {
+    float: left;
+  }
+
+  .competences .card .face {
+    height: 330px;
+    width: 500px;
   }
 }
