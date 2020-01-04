@@ -10,6 +10,7 @@ body {
   background-image: url(sources/Background-Laptop.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   font-family: consolas, sans-serif;
 }
 
@@ -212,6 +213,7 @@ body {
   font-family: consolas;
   background: rgb(131, 29, 29);
 }
+
 .projets h2 {
   text-align: center;
   font-size: 3em;
@@ -436,6 +438,7 @@ body {
     background-image: url(sources/Background1280.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
   }
 
   .first-content {
@@ -454,17 +457,41 @@ body {
 
   .competences {
     min-height: 100vh;
+    width: 100%;
     position: relative;
+    display: inline-block;
+    justify-content: center;
+    justify-content: space-between;
     font-family: consolas, sans-serif;
     background: #333;
   }
 
   .competences .card {
     float: left;
+    margin: 10px;
   }
 
   .competences .card .face {
     height: 330px;
     width: 500px;
+  }
+
+  .competences .card .face.face1 {
+    transform: translateY(170px);
+  }
+
+  .competences .card .face.face2 {
+    transform: translateY(-170px);
+  }
+
+  .projets {
+    display: inline-block;
+    position: relative;
+  }
+
+  .projets .container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
   }
 }
