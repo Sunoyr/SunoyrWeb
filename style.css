@@ -114,11 +114,13 @@ body {
   min-height: 100vh;
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   font-family: consolas, sans-serif;
   background: #333;
   justify-content: space-between;
+  justify-content: space-around;
 }
 
 .competences .card {
@@ -128,6 +130,8 @@ body {
 .competences .card .face {
   width: 300px;
   height: 200px;
+  display: flex;
+  flex-wrap: wrap;
   transition: 0.5s;
 }
 
@@ -458,22 +462,13 @@ body {
   .competences {
     min-height: 100vh;
     width: 100%;
-    position: relative;
-    display: inline-block;
-    justify-content: center;
-    justify-content: space-between;
     font-family: consolas, sans-serif;
     background: #333;
   }
 
-  .competences .card {
-    float: left;
-    margin: 10px;
-  }
-
   .competences .card .face {
-    height: 330px;
-    width: 500px;
+    height: 265px;
+    width: 400px;
   }
 
   .competences .card .face.face1 {
