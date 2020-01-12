@@ -212,7 +212,10 @@ body {
   padding: 0;
   margin: 0;
   height: 100vh;
+  width: 100%;
   min-height: 1000px;
+  position: relative;
+  display: inline-block;
   color: #fff;
   font-family: consolas;
   background: rgb(131, 29, 29);
@@ -224,16 +227,18 @@ body {
   padding: 10px 0 0 0;
 }
 
-.container {
+.projets .container {
   height: 800px;
   width: 1500px;
   position: relative;
-  top: 50%;
+  display: flex;
+  flex-wrap: wrap;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
 
-.container .box {
+.projets .container .box {
   position: relative;
   width: calc(500px - 30px);
   height: calc(400px - 30px);
@@ -243,9 +248,14 @@ body {
   box-sizing: border-box;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-between;
+  justify-content: space-around;
 }
 
-.container .box:before {
+.projets .container .box:before {
   content: "";
   position: absolute;
   top: 10px;
@@ -261,12 +271,12 @@ body {
   z-index: 1;
 }
 
-.container .box:hover:before {
+.projets .container .box:hover:before {
   transform: scaleY(1);
   opacity: 1;
 }
 
-.container .box:after {
+.projets .container .box:after {
   content: "";
   position: absolute;
   top: 10px;
@@ -282,26 +292,26 @@ body {
   z-index: 1;
 }
 
-.container .box:hover:after {
+.projets .container .box:hover:after {
   transform: scaleX(1);
   opacity: 1;
 }
 
-.container .box .imgBox {
+.projets .container .box .imgBox {
   position: relative;
 }
 
-.container .box .imgBox img {
+.projets .container .box .imgBox img {
   width: 100%;
   transition: 0.5s;
 }
 
-.container .box:hover .imgBox img {
+.projets .container .box:hover .imgBox img {
   opacity: 0.2;
   transform: scale(1.2);
 }
 
-.container .box .projectContent {
+.projets .container .box .projectContent {
   position: absolute;
   width: 100%;
   top: 50%;
@@ -312,7 +322,7 @@ body {
   text-align: center;
 }
 
-.container .box .projectContent h2 {
+.projets .container .box .projectContent h2 {
   margin: 0 0 10px;
   padding: 0;
   color: #fff;
@@ -322,7 +332,7 @@ body {
   opacity: 0;
 }
 
-.container .box .projectContent p {
+.projets .container .box .projectContent p {
   margin: 0;
   padding: 0;
   color: #fff;
@@ -332,8 +342,8 @@ body {
   opacity: 0;
 }
 
-.container .box:hover .projectContent h2,
-.container .box:hover .projectContent p {
+.projets .container .box:hover .projectContent h2,
+.projets .container .box:hover .projectContent p {
   opacity: 1;
   visibility: visible;
   transform: translateY(0px);
@@ -459,6 +469,27 @@ body {
     transform: translate(-50%, -50%);
   }
 
+  .projets {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: consolas, sans-serif;
+    background: rgb(131, 29, 29);
+    justify-content: space-between;
+    justify-content: space-around;
+  }
+
+  .projets .container {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
   .competences {
     min-height: 100vh;
     width: 100%;
@@ -472,21 +503,10 @@ body {
   }
 
   .competences .card .face.face1 {
-    transform: translateY(170px);
+    transform: translateY(130px);
   }
 
   .competences .card .face.face2 {
-    transform: translateY(-170px);
-  }
-
-  .projets {
-    display: inline-block;
-    position: relative;
-  }
-
-  .projets .container {
-    display: inline-block;
-    position: relative;
-    width: 100%;
+    transform: translateY(-130px);
   }
 }
