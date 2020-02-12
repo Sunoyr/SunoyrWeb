@@ -77,8 +77,8 @@ body {
 }
 
 #logo path:nth-child(10) {
-  stroke-dasharray: 322;
-  stroke-dashoffset: 322;
+  stroke-dasharray: 323;
+  stroke-dashoffset: 323;
   animation: line-anim 2s ease forwards 1.8s;
 }
 
@@ -128,8 +128,8 @@ body {
 }
 
 .competences .card .face {
-  width: 300px;
-  height: 200px;
+  width: 375px;
+  height: 250px;
   display: flex;
   flex-wrap: wrap;
   transition: 0.5s;
@@ -142,7 +142,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1;
-  transform: translateY(100px);
+  transform: translateY(125px);
 }
 
 .competences .card:hover .face.face1 {
@@ -182,16 +182,19 @@ body {
   padding: 20px;
   box-sizing: border-box;
   box-shadow: 0 20px 50px rgb(0, 0, 0, 0.8);
-  transform: translateY(-100px);
+  transform: translateY(-125px);
 }
 
 .competences .card:hover .face.face2 {
   transform: translateY(0);
 }
 
-.competences .card .face.face2 .content p {
+.competences .card .face.face2 .content p,
+.competences .card .face.face2 .content ul,
+.competences .card .face.face2 .content li {
   margin: 0;
   padding: 0;
+  font-size: 1.1em;
   color: #333;
 }
 
